@@ -25,6 +25,7 @@ default: all
 
 all: $(BINDIR)/asciipasswd \
 	$(BINDIR)/autowiz \
+        $(BINDIR)/merc2circle \
 	$(BINDIR)/plrtoascii \
 	$(BINDIR)/rebuildIndex \
 	$(BINDIR)/rebuildMailIndex \
@@ -37,6 +38,8 @@ all: $(BINDIR)/asciipasswd \
 asciipasswd: $(BINDIR)/asciipasswd
 
 autowiz: $(BINDIR)/autowiz
+
+merc2circle: $(BINDIR)/merc2circle
 
 plrtoascii: $(BINDIR)/plrtoascii
 
@@ -59,6 +62,9 @@ $(BINDIR)/asciipasswd: asciipasswd.c
 
 $(BINDIR)/autowiz: autowiz.c
 	$(CC) $(CFLAGS) -o $(BINDIR)/autowiz autowiz.c
+
+$(BINDIR)/merc2circle: merc2circle.c
+	$(CC) $(CFLAGS) -o $(BINDIR)/merc2circle merc2circle.c
 
 $(BINDIR)/plrtoascii: plrtoascii.c
 	$(CC) $(CFLAGS) -o $(BINDIR)/plrtoascii plrtoascii.c
