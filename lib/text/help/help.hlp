@@ -22,100 +22,6 @@ See Examples: @RTSTAT 7505, 154@n
 
 Example: @RTSTAT 19, 20@n
 #31
-TBA-ADMIN
-
-Help and World files are the "master" versions. Before a release I copy the help file and World files to /tbamud
-Only difference from stock is do_cheat, help files viewable by any level, do_advance is LVL_GOD, and 600+ zones.
-tbamud.com is the latest Joomla version with Kunena as our forums. Download section is Google Drive.
-Builder Applications can be viewed here: goo.gl/0FBsys
-Backups are done monthly of /tba and using the Akeeba component in Joomla, I keep an archive. Github is our version control system but I like backups of backups. Please do reasonable backups of your own.
-
-To setup a trial vnum (in this case test for 61165:
-advance test 31
-set test nohassle off
-set test olc 611
-set test title has trial vnum 61165
-set test loadroom 3
-set test gold 1000000
-restore test
-redit 61165
-1
-test's Trial Vnum
-q
-y
-toggle nohassle off
-load obj 1332
-set self level 32
-tbalim test 61165
-return
-toggle nohassle on
-
-To setup test with zone 348
-return
-saveall
-set test olc 348
-set file test olc 348
-set test title has zone 348
-set file test title has zone 348
-set test loadroom 348
-set file test loadroom 348
-set test gold 1000000
-wiznet Okay test, you have zone 348 vnum's 34800 to 34899. Help buildwalk and help dig to learn how to create and link your rooms. If you have any questions just ask.
-toggle nohassle off
-load obj 1332
-set self level 32
-tbalim test purge
-return
-restore test
-toggle nohassle on
-redit 34800
-1
-test's Zone Description Room
-q
-y
-zedit 34800
-1
-test
-z
-Name Me - test
-q
-y
-redit 34800
-2
-return
-saveall
-set test olc 348
-set test title has zone 348
-set test loadroom 348
-set test gold 1000000
-wiznet Okay test, you have zone 348 vnum's 34800 to 34899. Help buildwalk and help dig to learn how 
-to create and link your rooms. If you have any questions just ask.
-toggle nohassle off
-load obj 1332
-set self level 32
-tbalim test purge
-return
-restore test
-toggle nohassle on
-redit 34800
-1
-test's Zone Description Room
-q
-y
-zedit 34800
-1
-test
-z
-Name Me - test
-q
-y
-redit 34800
-2
-<paste zone proposal here>
-q
-y
-See Also: TBA-STAFF, TBA-ZONES
-#32
 %DAMAGE% ODAMAGE MDAMAGE WDAMAGE TRIGEDIT-DAMAGE TRIGEDIT-ROOM-DAMAGE TRIG-DAMAGE
 
 %damage% %victim% amount
@@ -1060,19 +966,6 @@ Shows your balance.
 Moves all of your money in/out of the bank.
 
 See also: GOLD, SCORE
-#0
-BANDAGE
-
-Some fighting classes only.
-
-Usage: bandage [patient]
-
-The bandage skill is used to treat extremely critical patients who are
-in imminent danger of dying.  Upon successful application of bandages,
-the patient will be stabilized but will still be in critical condition.
-If the bandage application fails, the patient will suffer additional
-trauma which may hasten their ultimate fate.  The success of this skill
-will depend upon how well it has been learned.
 #0
 BASH
 
@@ -7904,97 +7797,6 @@ The following terrains may be selected (only one):
 10)  Underwater       Underwater requires AFF_SCUBA.          5 
 
 #31
-RELEASES
- 
-If you have any additions, corrections, ideas, or bug reports please stop by the
-Builder Academy at telnet://tbamud.com:9091 or email rumblebamud.com -- Rumble
- 
-CircleMUD Release History 
-Originally by Jeremy Elson 
- 
-Abstract 
- 
-This document lists the release history of CircleMUD and at the end is the post
-to rec.games.mud.diku which originally anounced CircleMUD as a publically 
-available MUD source code. 
- 
-Release history:
-Version 3.63 release: April, 2012
-Version 3.62 release: September, 2010
-Version 3.61 release: January, 2010
-Version 3.60 release: September, 2009
-Version 3.59 release: April, 2009
-Version 3.58 release: January, 2009
-Version 3.57 release: August, 2008
-Version 3.56 release: April, 2008
-Version 3.55 release: January, 2008
-Version 3.54 release: December, 2007
-Version 3.53 release: July, 2007
-Version 3.52 release: April, 2007
-Version 3.51 release: February, 2007
-Version 3.5 release: December, 2006
-Version 3.1  (yes, no beta pl): November 18, 2002
-Version 3.00 beta pl22 release: October 4, 2002
-Version 3.00 beta pl21 release: April 15, 2002
-Version 3.00 beta pl20 release: January 15, 2002
-Version 3.00 beta pl19 release: August 14, 2001
-Version 3.00 beta pl18 release: March 18, 2001
-Version 3.00 beta pl17 release: January 23, 2000
-Version 3.00 beta pl16 release: August 30, 1999
-Version 3.00 beta pl15 release: March 16, 1999
-Version 3.00 beta pl14 release: July 3, 1998
-Version 3.00 beta pl13a release: June 4, 1998
-Version 3.00 beta pl13 release: June 1, 1998
-Version 3.00 beta pl12 release: October 29, 1997
-Version 3.00 beta pl11 release: April 14, 1996
-Version 3.00 beta pl10 release: March 11, 1996
-Version 3.00 beta pl9 release: February 6, 1996
-Version 3.00 beta pl8 release: May 23, 1995
-Version 3.00 beta pl7 release: March 9, 1995
-Version 3.00 beta pl6 release: March 6, 1995
-Version 3.00 beta pl5 release: February 23, 1995
-Version 3.00 beta pl4 release: September 28, 1994
-Version 3.00 beta pl1-3, internal releases for beta-testers.
-Version 3.00 alpha: Ran on net for testing.  Code not released.
-Version 2.20 release: November 17, 1993
-Version 2.11 release: September 19, 1993
-Version 2.10 release: September 1, 1993
-Version 2.02 release: Late August 1993
-Version 2.01 release: Early August 1993
-Version 2.00 release: July 16, 1993 (Initial public release)
- 
-The CircleMUD ?press release? is included below, in case you haven?t seen it 
-and want to.
- 
-Wake the kids and find the dog, because it?s the FTP release of 
- 
-CIRCLEMUD 2.0 
- 
-That?s right --CircleMUD 2.0 is done and is now available for anonymous FTP 
-at ftp.cs.jhu.edu! 
- 
-CircleMUD is highly developed from the programming side, but highly UNdeveloped 
-on the game-playing side. So, if you?re looking for a huge MUD with billions 
-of spells, skills, classes, races, and areas, Circle will probably disappoint 
-you severely. Circle still has only the 4 original Diku classes, the original 
-spells, the original skills, and about a dozen areas. 
- 
-On the other hand, if you?re looking for a highly stable, well-developed, 
-well-organized "blank slate" MUD on which you can put your OWN ideas for 
-spells, skills, classes, and areas, then Circle might be just what you?re 
-looking for. 
- 
-"Multi-user WHAT?" --My Mom 
-Give it a try --what do you have to lose other than your GPA/job, friends, 
-and life? 
- 
-Good luck, and happy Mudding, 
- 
-Jeremy Elson aka Ras 
- 
-Circle and tbaMUD?s complete source code and areas are available at
-http://www.tbamud.com.
-#0
 RELOAD
 
 Usage: reload < '*' | all | file >
@@ -8670,8 +8472,7 @@ See also: HIDE
 #0
 SERVERS FREE-SERVERS HOSTINGS FREE-HOSTS
 
-http://amber.org.uk
-www.frostmud.com
+https://www.funcity.org/ - hosted by Jason "Opie" Babo
 
 If you have any additions or deletions please mudmail rumble.
 
@@ -9979,6 +9780,143 @@ be an object a mobile or a player. Usually used in conjunction with another
 command.
 
 #31
+TBA TBAMUD PROJECT BACKGROUND STORY HISTORY INTRODUCTION ACADEMY COMMUNITY OVERVIEW VISION TBA-VISION
+
+TBA stands for The Builder Academy. 
+@RGOTO 3@n to enter the Builder Academy tutorial.
+
+The Builder Academy (TBA) was created in October of 2000 on the MUD Cruel World. It began
+with a combination of my own MUDding experience and the work of numerous others from the
+MUDding community and evolved into an extensive tutorial zone, help files, and examples.
+
+
+TBA now has two main missions. It originally was meant to be a training MUD open to anyone
+willing to learn or teach how to create your own text-based World. 1,000's of builder's have
+gone through our training and many MUDs require new builders to complete training at TBA before
+they can apply to their MUD. TBA's other mission is the development of the codebase formerly
+known as CircleMUD. Due to CircleMUD's stagnation TBA staff decided to release our codebase under
+the name tbaMUD and we have been updating it tirelessly for over 10 years.
+
+TBA is a low stress, no deadline, training environment where anyone with motivation can work at
+their own pace to learn as much or as little as they wish. Numerous people are available to answer
+questions and give advice.
+
+1000's of builders served and counting.
+
+The most challenging aspect of running a MUD is finding good builders. You will hear this from the
+admin of every MUD that has ever been. In the past it has always been up to each individual MUD to
+find and usually train their own builders. This works, but I think the MUDding community can come up
+with something better. That is why we created The Builder's Academy. No pressure, no deadline, just
+come and learn or help teach. Give something back to the community we have all taken so much from.
+TBA is a MUDding community resource, please submit any lessons learned or building tips and tricks
+so we can improve our codebase and training.
+
+TBA can also be used by other MUDs as a builder's port. Just send us your newbie builders. We will
+teach them and then you can have them back with the zones they built.
+
+We are always open to anyone willing to learn or help teach so we can continue to improve the tbaMUD
+codebase.
+
+- Rumble
+The Builder Academy
+tbamud.com 9091
+
+See also: NEWBIE
+#0
+TBA-ADMIN
+
+Help and World files are the "master" versions. Before a release I copy the help file and World files to /tbamud
+Only difference from stock is do_cheat, help files viewable by any level, do_advance is LVL_GOD, and 600+ zones.
+tbamud.com is the latest Joomla version with Kunena as our forums. Download section is Google Drive.
+Builder Applications can be viewed here: goo.gl/0FBsys
+Backups are done monthly of /tba and using the Akeeba component in Joomla, I keep an archive. Github is our version control system but I like backups of backups. Please do reasonable backups of your own.
+
+To setup a trial vnum (in this case test for 61165:
+advance test 31
+set test nohassle off
+set test olc 611
+set test title has trial vnum 61165
+set test loadroom 3
+set test gold 1000000
+restore test
+redit 61165
+1
+test's Trial Vnum
+q
+y
+toggle nohassle off
+load obj 1332
+set self level 32
+tbalim test 61165
+return
+toggle nohassle on
+
+To setup test with zone 348
+return
+saveall
+set test olc 348
+set file test olc 348
+set test title has zone 348
+set file test title has zone 348
+set test loadroom 348
+set file test loadroom 348
+set test gold 1000000
+wiznet Okay test, you have zone 348 vnum's 34800 to 34899. Help buildwalk and help dig to learn how to create and link your rooms. If you have any questions just ask.
+toggle nohassle off
+load obj 1332
+set self level 32
+tbalim test purge
+return
+restore test
+toggle nohassle on
+redit 34800
+1
+test's Zone Description Room
+q
+y
+zedit 34800
+1
+test
+z
+Name Me - test
+q
+y
+redit 34800
+2
+return
+saveall
+set test olc 348
+set test title has zone 348
+set test loadroom 348
+set test gold 1000000
+wiznet Okay test, you have zone 348 vnum's 34800 to 34899. Help buildwalk and help dig to learn how 
+to create and link your rooms. If you have any questions just ask.
+toggle nohassle off
+load obj 1332
+set self level 32
+tbalim test purge
+return
+restore test
+toggle nohassle on
+redit 34800
+1
+test's Zone Description Room
+q
+y
+zedit 34800
+1
+test
+z
+Name Me - test
+q
+y
+redit 34800
+2
+<paste zone proposal here>
+q
+y
+See Also: TBA-STAFF, TBA-ZONES
+#32
 TBA-ADVERTISING
 
 Mud Created: 2000 
@@ -10048,49 +9986,6 @@ TBAMAPS TBA-MAPS
 
 See also: CARTOGRAPHY, ASCII
 #31
-TBA TBAMUD PROJECT BACKGROUND STORY HISTORY INTRODUCTION ACADEMY COMMUNITY OVERVIEW VISION TBA-VISION
-
-TBA stands for The Builder Academy. 
-@RGOTO 3@n to enter the Builder Academy tutorial.
-
-The Builder Academy (TBA) was created in October of 2000 on the MUD Cruel World. It began
-with a combination of my own MUDding experience and the work of numerous others from the
-MUDding community and evolved into an extensive tutorial zone, help files, and examples.
-
-
-TBA now has two main missions. It originally was meant to be a training MUD open to anyone
-willing to learn or teach how to create your own text-based World. 1,000's of builder's have
-gone through our training and many MUDs require new builders to complete training at TBA before
-they can apply to their MUD. TBA's other mission is the development of the codebase formerly
-known as CircleMUD. Due to CircleMUD's stagnation TBA staff decided to release our codebase under
-the name tbaMUD and we have been updating it tirelessly for over 10 years.
-
-TBA is a low stress, no deadline, training environment where anyone with motivation can work at
-their own pace to learn as much or as little as they wish. Numerous people are available to answer
-questions and give advice.
-
-1000's of builders served and counting.
-
-The most challenging aspect of running a MUD is finding good builders. You will hear this from the
-admin of every MUD that has ever been. In the past it has always been up to each individual MUD to
-find and usually train their own builders. This works, but I think the MUDding community can come up
-with something better. That is why we created The Builder's Academy. No pressure, no deadline, just
-come and learn or help teach. Give something back to the community we have all taken so much from.
-TBA is a MUDding community resource, please submit any lessons learned or building tips and tricks
-so we can improve our codebase and training.
-
-TBA can also be used by other MUDs as a builder's port. Just send us your newbie builders. We will
-teach them and then you can have them back with the zones they built.
-
-We are always open to anyone willing to learn or help teach so we can continue to improve the tbaMUD
-codebase.
-
-- Rumble
-The Builder Academy
-tbamud.com 9091
-
-See also: NEWBIE
-#0
 TEDITOR
 
 Usage: tedit [file]
@@ -10233,6 +10128,11 @@ MOB: 1322
              ^^^//\\_^^//\\_^       ^(\_\_\_\)
                ^^^ ^^ ^^^ ^^
 #31
+RELEASES
+
+The complete release history of tbaMUD is available at:
+https://github.com/tbamud/tbamud/blob/master/doc/releases.txt
+#0
 THE-MUD-CONNECTOR TMC MUD-CONNECTOR MUDCONNECTOR
 
    Most of our traffic comes through word of mouth or TMC reviews. If you are so
@@ -12197,20 +12097,6 @@ Usage: unaffect [target]
 Removes all affections (i.e., spell effects) from a player.
 
 #31
-UNFOLLOW
-
-Usage: unfollow
-
-The UNFOLLOW command will stop a player from following another player or
-creature.  This command will not succeed if the player is under the 
-influence of a CHARM spell.
-
-Examples:
-
-  > unfollow
-
-See also: FOLLOW
-#0
 UNGROUP DISBAND
 
 Usage: ungroup [group member]
@@ -12783,7 +12669,7 @@ Examples:
 >; @              - shows all gods that are on and visible to you.
                   - also shows if the gods who are visible to you are writing.
 >;#<level> <text> - sends text to everyone <level> and above.
-                  - ;#2 only God and above will see this.
+                  - ;#32 only God and above will see this.
 
 See also: NOWIZ
 #31

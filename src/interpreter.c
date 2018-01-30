@@ -349,7 +349,7 @@ cpp_extern const struct command_info cmd_info[] = {
   { "withdraw" , "withdraw", POS_STANDING, do_not_here , 1, 0 },
   { "wiznet"   , "wiz"     , POS_DEAD    , do_wiznet   , LVL_IMMORT, 0 },
   { ";"        , ";"       , POS_DEAD    , do_wiznet   , LVL_IMMORT, 0 },
-  { "wizhelp"  , "wizhelp" , POS_SLEEPING, do_commands , LVL_IMMORT, SCMD_WIZHELP },
+  { "wizhelp"  , "wizhelp" , POS_DEAD    , do_wizhelp  , LVL_IMMORT, 0 },
   { "wizlist"  , "wizlist" , POS_DEAD    , do_gen_ps   , 0, SCMD_WIZLIST },
   { "wizupdate", "wizupde" , POS_DEAD    , do_wizupdate, LVL_GRGOD, 0 },
   { "wizlock"  , "wizlock" , POS_DEAD    , do_wizlock  , LVL_IMPL, 0 },
@@ -392,6 +392,7 @@ static const struct mob_script_command_t mob_script_commands[] = {
   { "mtransform", do_mtransform , 0 },
   { "mzoneecho", do_mzoneecho, 0 },
   { "mfollow"  , do_mfollow  , 0 },
+  { "mlog"     , do_mlog     , 0 },
   { "\n" , do_not_here , 0 } };
 
 int script_command_interpreter(struct char_data *ch, char *arg) {
